@@ -1,4 +1,5 @@
-################Outils/notions rencontrées
+################ Outils/notions rencontrées
+
 virtualisation/emulation
 RISC/CISC
 cross-compilation
@@ -12,12 +13,13 @@ Buildroot
 chroot
 KVM et de QEMU
 
-################OBJECTIFS: creer un GNU/Linux embarqué(microlinux ..) from scratch(puis), en s'aidant d'un kit de génération
+################ OBJECTIFS: creer un GNU/Linux embarqué(microlinux ..) from scratch(puis), en s'aidant d'un kit de génération
+
 - utiliser une chaine de compilation raspberry
 - creer un env chroot et installer à l'intérieur une chaine de compilation
 - emuler une image de Raspbian (emulation native, avec kernel modifié)
 - librairies et outils nécessaires
-################steps
+################ steps
 
 Chroot un ARM système est un moyen simple d'avoir un accès à un système sans avoir de matériel spécifique, donc nous permettre de construire des paquets pour les appareils ARM. 
 Cela peut être une alternative au "cross-compiling" où nous sommes limités à mettre en relation (linking) uniquement avec les librairies du compilateur.
@@ -27,7 +29,7 @@ Cela peut être une alternative au "cross-compiling" où nous sommes limités à
  * Dans le chroot, un petit test avec 'uname'
  
  On peut mm passer au debogage GDB:
- # In a terminal
+
 $ qemu-arm-static -g 10101 ./project
 $ sudo apt-get install gdb-multiarch
 
